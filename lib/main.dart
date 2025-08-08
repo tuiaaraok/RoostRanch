@@ -42,7 +42,6 @@ Future<String> _initializeRemoteConfig() async {
         minimumFetchInterval: const Duration(minutes: 1),
       ),
     );
-
     try {
       await remoteConfig.fetchAndActivate();
       link = remoteConfig.getString("link");
